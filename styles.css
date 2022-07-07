@@ -1,0 +1,29 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  font-size: 40px;
+  padding-bottom: 20px;
+}
+
+#grid {
+  display: grid;
+  width: 500px;
+  height: 500px;
+  background-color: antiquewhite;
+}
+
+.grid-item {
+  border: 1px solid salmon;
+  padding: 1px;
+}
+
+#test {
+  background-color: aqua;
+  padding: 20px;
+}
