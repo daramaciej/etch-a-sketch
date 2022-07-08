@@ -11,19 +11,28 @@ function setupGrid (size) {
 
     for (let i = 0; i < (size * size); i++) {
         const gridItem = document.createElement("div");
-        gridItem.addEventListener('click', addColor);
+        gridItem.addEventListener('mousemove', addColor);
         gridItem.classList.add('grid-item');
         grid.appendChild(gridItem);
     }
 }
 
-setupGrid(16);
+
+
+function askGridSize() {  
+    let gridSize = parseInt(prompt("Select grid size:"));  
+    setupGrid(gridSize);
+    }  
+
+setupGrid(0);
 
 function addColor () {
     this.style.backgroundColor = "green"
 }
+
 /**
- * 1. Create empty div in HTML
- * 2. Create new element in memory 
- * 3. Color the empty div on color
+ * Create button
+ * Create prompt message asking about grid size
+ * Store somehwere the grid size
+ * Use the grid size on setupGrid function
  */
