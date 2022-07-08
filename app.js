@@ -20,9 +20,15 @@ function setupGrid (size) {
 
 
 function askGridSize() {  
-    let gridSize = parseInt(prompt("Select grid size:"));  
-    setupGrid(gridSize);
-    }  
+    let gridSize = parseInt(prompt("Select grid size from 1 to 100:"));
+
+    if (gridSize > 100) {
+        alert("Too big! Please select from 1 to 100:")
+        askGridSize();
+    } else {  
+        setupGrid(gridSize);
+    }
+}  
 
 setupGrid(0);
 
